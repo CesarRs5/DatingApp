@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v1/[controller]")]
 public class UsersController : ControllerBase
 {
     private readonly DataContext _context;
@@ -24,8 +24,8 @@ public class UsersController : ControllerBase
         return Ok(users) ;
     }
 
-    [HttpGet("{id}")]
-    public ActionResult<AppsUser> GetUsers2ById (int id)
+    [HttpGet("{id}")] // api/v1/users/2
+    public ActionResult<AppsUser> GetUsersById (int id)
     {
         var users = _context.Users.Find(id);
         if (users==null) return NotFound();
