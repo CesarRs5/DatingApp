@@ -23,7 +23,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        var tokenKey = builder.Configuration["TokenKey"]?? throw new ArgumentNullException(nameof(builder.Configuration["TokenKey"]));
+        var tokenKey = builder.Configuration["TokenKey"]?? throw new ArgumentNullException(builder.Configuration["TokenKey"]);
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
