@@ -11,15 +11,14 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-  private accountService= inject(AccountService);
+  accountService= inject(AccountService);
   model: any={ };
-  loggedIn=false;
+  
 
   login():void{
     this.accountService.login(this.model).subscribe({
       next: (response)=> {
-        console.log(response);
-        this.loggedIn=true;
+        console.log(response);       
         } ,
       error: (error)=>{
         console.log(error);
@@ -28,7 +27,7 @@ export class NavComponent {
   }
 
   logout():void {
-    this.loggedIn=false;
+    this.accountService.logout();
   }
 }
     
