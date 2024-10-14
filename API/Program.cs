@@ -20,7 +20,7 @@ app.UseCors((c)=>c
 .AllowAnyHeader()
 .AllowAnyMethod()
 .WithOrigins(
-    "http://localhost:4200",
+    //"http://localhost:4200",
     "https://localhost:4200"));
 
 
