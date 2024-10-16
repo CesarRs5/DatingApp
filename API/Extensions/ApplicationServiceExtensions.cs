@@ -11,12 +11,12 @@ namespace API.Extensions
 {
     public static class ApplicationServiceExtensions
     {
-        public static IServiceCollection AddApplicationServices (
+        public static IServiceCollection AddApplicationServices(
             this IServiceCollection services,
             IConfiguration config
         )
         {
-           services.AddControllers();
+            services.AddControllers();
             services.AddDbContext<DataContext>(opt => 
             {
                 opt.UseSqlite(config.GetConnectionString("DefaultConnection"));

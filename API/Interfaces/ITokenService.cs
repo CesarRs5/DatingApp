@@ -1,10 +1,9 @@
+namespace API.Interfaces;
+
 
 using API.Entities;
 
-namespace API.Interfaces
+public interface ITokenService
 {
-    public interface ITokenService
-    {
-        string CreateToken(AppsUser user);
-    }
+    string CreateToken(AppsUser user);
 }
