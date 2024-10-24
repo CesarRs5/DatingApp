@@ -11,29 +11,30 @@ import { Component, inject } from '@angular/core';
 export class TestErrorsComponent {
   baseurl = "https://localhost:5001/api/";
   private http = inject(HttpClient);
+  validationErrors: string []= [];
 
-  get400Erros(): void{
+  get400Errors(): void{
     this.http.get(this.baseurl + "buggy/bad-request").subscribe({
       next: (response) => console.log(response),
       error: (error) => console.log(error)
     })    
   }
 
-  get401Erros(): void{
+  get401Errors(): void{
     this.http.get(this.baseurl + "buggy/auth").subscribe({
       next: (response) => console.log(response),
       error: (error) => console.log(error)
     })    
   }
 
-  get404Erros(): void{
+  get404Errors(): void{
     this.http.get(this.baseurl + "buggy/not-found").subscribe({
       next: (response) => console.log(response),
       error: (error) => console.log(error)
     })    
   }
 
-  get500Erros(): void{
+  get500Errors(): void{
     this.http.get(this.baseurl + "buggy/server-error").subscribe({
       next: (response) => console.log(response),
       error: (error) => console.log(error)
@@ -43,7 +44,11 @@ export class TestErrorsComponent {
   get400ValidationError(): void{
     this.http.post(this.baseurl + "account/register", {}).subscribe({
       next: (response) => console.log(response),
-      error: (error) => console.log(error)
+      error: (error) => {
+        console.log(error);
+        this.validationErrors = error;
+      }
+      
     })    
   }
 }

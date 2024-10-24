@@ -1,7 +1,18 @@
 <div>
-    <button class="btn btn-primary me-3" (click)="get400Erros()">400 Error</button>
-    <button class="btn btn-primary me-3" (click)="get401Erros()">401 Error</button>
-    <button class="btn btn-primary me-3" (click)="get404Erros()">404 Error</button>
-    <button class="btn btn-primary me-3" (click)="get500Erros()">500 Error</button>
+    <button class="btn btn-primary me-3" (click)="get400Errors()">400 Error</button>
+    <button class="btn btn-primary me-3" (click)="get401Errors()">401 Error</button>
+    <button class="btn btn-primary me-3" (click)="get404Errors()">404 Error</button>
+    <button class="btn btn-primary me-3" (click)="get500Errors()">500 Error</button>
     <button class="btn btn-primary me-3" (click)="get400ValidationError()">400 ValidationError</button>
+
+    @if(validationErrors.length > 0){
+        <div class="row mt-5">
+            <ul class="text-danger">
+                @for(error of validationErrors; track $index){
+                    <li>{{error}}</li>
+                }
+                
+            </ul>
+        </div>
+    }
 </div>
