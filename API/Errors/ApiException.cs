@@ -5,6 +5,6 @@ public class ApiException(int statusCode, string message, string? details)
 
     public string Message { get; set; } = message;
 
-    public string? Datails { get; set; } = details;
+    public string? Details { get; set; } = details;
 
 }
