@@ -1,6 +1,6 @@
 
 
-namespace API.Entities;
+namespace API.DataEntities;
 
 using System.ComponentModel.DataAnnotations.Schema;
 

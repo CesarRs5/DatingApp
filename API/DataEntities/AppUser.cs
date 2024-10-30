@@ -1,4 +1,4 @@
-namespace API.Entities;
+namespace API.DataEntities;
 
 using API.Extensions;
 
@@ -15,9 +15,9 @@ public class AppsUser
 
     public required string KnownAs { get; set; }
 
-    public DateTime Created { get; set; }
+    public DateTime Created { get; set; } = DateTime.Now;
 
-    public DateTime LastActive { get; set; }
+    public DateTime LastActive { get; set; } = DateTime.Now;
 
     public required string Gender { get; set; }
 
