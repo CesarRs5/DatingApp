@@ -28,6 +28,6 @@ public class MemberResponse
 
     public string? Country { get; set; }
 
-    public List<PhotoDto>? Photos { get; set; } = [];
+    public List<PhotoResponse>? Photos { get; set; } = [];
 
 }
