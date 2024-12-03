@@ -3292,11 +3292,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\cesar\\OneDrive\\Escritorio\\9Semestre\\ServiciosWeb\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\cesar\\OneDrive\\Escritorio\\9Semestre\\ServiciosWeb\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "c:\\Users\\cesar\\OneDrive\\Escritorio\\9Semestre\\ServiciosWeb\\DatingApp\\API\\API.csproj",
+      "projectPath": "C:\\Users\\cesar\\OneDrive\\Escritorio\\9Semestre\\ServiciosWeb\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\cesar\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\cesar\\OneDrive\\Escritorio\\9Semestre\\ServiciosWeb\\DatingApp\\API\\obj\\",
+      "outputPath": "C:\\Users\\cesar\\OneDrive\\Escritorio\\9Semestre\\ServiciosWeb\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cesar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3372,7 +3372,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
